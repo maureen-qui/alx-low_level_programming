@@ -2,9 +2,10 @@
 
 /**
  * main - print _putchar
- * is wrtten by bwave
+ * this is wriiten by bwave
  * Return: 0
  */
+
 int main(void)
 {
 _putchar('_');
