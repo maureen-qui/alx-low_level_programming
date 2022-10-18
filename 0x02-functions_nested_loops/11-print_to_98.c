@@ -20,20 +20,21 @@ void print_to_98(int n)
 			n++;
 		}
 	}
-}
-else if (n > 98)
-{
-	while (n >= 98)
+	else if (n > 98)
 	{
-		printf("%d", n);
-		if (n != 98)
+		while (n >= 98)
 		{
-			printf(", ");
+			printf("%d", n);
+			if (n != 98)
+			{
+				printf(", ");
+			}
+			n--;
 		}
-		n--;
 	}
-}
-else
-{
-	printf("98");
+	else
+	{
+		printf("98");
+	}
+	printf("\n");
 }
