@@ -1,17 +1,18 @@
-#include < stdio.h >
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
- * main-prints alpha in lower case 
- * Return: Always 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char lc;
+	char low;
 
-	for (lc = 'a'; lc <= 'z'; lc++)
-	{
-		putchar(lc);
-	}
-	putchar('\n');
+	for (low = 'a'; low <= 'z'; low++)
+		putchar(low);
+	printf("\n");
+
 	return (0);
 }
