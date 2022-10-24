@@ -1,18 +1,16 @@
 #include "main.h"
 
 /**
- *  _isdigit -  a function that checks for a digit 
- *  @c: character
- *
- *  Return: 0 or 1
+ *  _isdigit - checks or checks fo a digit (0 through 9).
+ *  @c: c -  Variable
+ *  Return: Always 0.
  */
-int _isdigit(int c);
+int _isdigit(int c)
 {
-	char c;
 
-	c = '0';
-	printf("%c: %d\n", c, _isdigit(c));
-	c = 'a';
-	printf("%c: %d\n", c, _isdigit(c));
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
 	return (0);
 }
