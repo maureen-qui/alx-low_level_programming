@@ -6,10 +6,13 @@
  *
  *  Return: 0 or 1
  */
-int _isdigit(int c)
+int _isdigit(int c);
 {
-if (c >= '0' && c <= '0')
-return (1);
-else
-return (0);
+	char c;
+
+	c = '0';
+	printf("%c: %d\n", c, _isdigit(c));
+	c = 'a';
+	printf("%c: %d\n", c, _isdigit(c));
+	return (0);
 }
