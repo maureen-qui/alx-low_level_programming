@@ -1,22 +1,19 @@
 #include "main.h"
-#include < stdio.h >
+#include <stdio.h>
 /**
- * print_chessboard - Print the chessboard
- * @a: array of pieces
- *
- * Return: Alaways 0.
+ * print_diagsums - Entry point
+ * @a: input
+ * @size: input
+ * Return: Always 0 (Success)
  */
-void print_diagsums(int *a, int size);
+void print_diagsums(int *a, int size)
 {
-	int b, c;
+int i, n, total1 = 0, total2 = 0;
 
-	for (b = 0; b < 8; b++)
-	{
-		for (c = 0; c < 8; c++)
-		{
-			_putchar(a[b][c]);
-		}
+for (i = 0; i <= (size * size); i = i + size + 1)
+total1 = total1 + a[i];
 
-		_putchar('\n');
-	}
+for (n = size - 1; n <= (size * size) - size; n = n + size - 1)
+total2 = total2 + a[n];
+printf("%d, %d\n", total1, total2);
 }
