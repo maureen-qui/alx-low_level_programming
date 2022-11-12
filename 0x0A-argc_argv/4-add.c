@@ -11,36 +11,32 @@
  * Return: Always zero
  */
 int main(int argc, char *argv[])
-{
-int i;
-unsigned int k, sum = 0;
-char *e;
+int i, j, length, sum;
+char *ptr;
 
-if (argc > 1)
+if (argc < 2)
+printf("0\n");
+else
 {
+sum = 0;
 for (i = 1; i < argc; i++)
 {
-e = argv[i];
+ptr = argv[i];
+length = strlen(ptr);
 
-for (k = 0; k < strlen(e); k++)
+for (j = 0; j < length; j++)
 {
-if (e[k] < 48 || e[k] > 57)
+if (isdigit(*(ptr + j)) == 0)
 {
 printf("Error\n");
 return (1);
 }
 }
 
-sum += atoi(e);
-e++;
+sum += atoi(argv[i]);
 }
 
 printf("%d\n", sum);
 }
-else
-{
-printf("0\n");
-}
-
 return (0);
 }
