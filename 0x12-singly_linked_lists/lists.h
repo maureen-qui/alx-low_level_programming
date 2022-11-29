@@ -1,5 +1,10 @@
 #ifndef LIST_H
-#define LIST
+#define LIST_H
+
+/*
+ * Desc: Header file containing prototypes and definations
+ *       for all functions and types written in this project
+ */
 
 #include <stdlib.h>
 
