@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * print_list - Prints all the elements of a list_t list.
@@ -20,5 +22,5 @@ cont++;
 h = h->next;
 }
 
-return (nelem);
+return (cont);
 }
