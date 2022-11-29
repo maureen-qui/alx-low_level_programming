@@ -2,6 +2,8 @@
 #define LIST_H
 
 /*
+ * File: lists.h
+ * Auth: Maureen w wamwea
  * Desc: Header file containing prototypes and definations
  *       for all functions and types written in this project
  */
