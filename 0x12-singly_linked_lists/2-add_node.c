@@ -5,7 +5,7 @@
 /**
  * add_note - Adds a new node at the beginning of a list
  * @head: The original linked list
- * @str: The string to add to the node
+ * @str: The string to add to the nod
  * Return: The address of the new list or NULL if if failed
  */
 list_t *add_node(list_t **head, const char *str)
@@ -19,7 +19,7 @@ if (temp == NULL)
 return (NULL);
 
 temp->str = strdup(str);
-temp->len = _strlen(str);
+temp->len = strlen(str);
 temp->next = *head;
 
 *head = temp;
