@@ -10,17 +10,77 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-size_t pichu = 0;
-const listint_t *aux_node = head;
+listint_t *tortoise, *hare;
+size_t nodes = 1;
 
-if (!head)
-exit(98);
+if (head == NULL || head->next == NULL)
+return (0);
 
-while (aux_node)
+tortoise = head->next;
+hare = (head->next)->next;
+
+while (hare)
 {
-printf("[%p] %i\n", (void *)aux_node, aux_node->n);
-aux_node = aux_node->next;
-pichu++;
+if (tortoise == hare)
+{
+tortoise = head;
+while (tortoise != hare)
+{
+nodes++;
+tortoise = tortoise->next;
+hare = hare->next;
 }
-return (pichu);
+
+tortoise = tortoise->next;
+while (tortoise != hare)
+{
+nodes++;
+tortoise = tortoise->next;
+}
+
+return (nodes);
+}
+
+/**
+ * free_listint_safe - Frees a listint_t list safely (ie.
+ *                     can free lists containing loops)
+ * @h: A pointer to the address of
+ *      the head of the listint_t list.
+ *
+ *      Return: The size of the list that was freed.
+ *
+ *      Description: The function sets the head to NULL.
+ */
+size_t free_listint_safe(listint_t **h)
+{
+listint_t *tmp;
+size_t nodes, index;
+
+nodes = looped_listint_count(*h);
+
+if (nodes == 0)
+{
+for (; h != NULL && *h != NULL; nodes++)
+{
+tmp = (*h)->next;
+free(*h);
+*h = tmp;
+}
+}
+
+else
+{
+for (index = 0; index < nodes; index++)
+{
+tmp = (*h)->next;
+free(*h);
+*h = tmp;
+}
+
+*h = NULL;
+}
+
+h = NULL;
+
+return (nodes);
 }

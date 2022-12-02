@@ -5,7 +5,7 @@
 
 /**
  * print_listint - Prints all the elements of a linked list
- * @h: The head of the linked list 
+ * @head: The head of the linked list 
  *
  * Return: The number of nodes of the linked list
  */
