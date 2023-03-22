@@ -1,7 +1,7 @@
 CC = gcc
-SRC = main.c alx.c
+SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
-NAME = alx
+NAME = holberton
 RM = rm -f
 
 all: ${OBJ}
