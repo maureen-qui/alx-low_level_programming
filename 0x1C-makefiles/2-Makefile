@@ -1,0 +1,7 @@
+CC = gcc
+SRC = main.c alx.c
+OBJ = $(SRC:%.c=%.o)
+NAME = alx
+
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}

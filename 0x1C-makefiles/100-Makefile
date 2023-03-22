@@ -1,0 +1,21 @@
+CC = gcc
+SRC = main.c alx.c
+OBJ = $(SRC:.c=.o)
+NAME = alx
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: ${OBJ}
+	${CC} ${CFLAGS} ${OBJ} -o ${NAME}
+
+clean:
+	${RM} *~ ${NAME}
+
+oclean:
+	${RM} ${OBJ}
+
+fclean:
+	${RM} *~ ${NAME}
+	${RM} ${OBJ}
+
+re: fclean all
