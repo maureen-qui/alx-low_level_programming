@@ -4,4 +4,10 @@ OBJ = $(SRC:.c=.o)
 NAME = alx
 
 all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+$(CC) $(OBJ) -o $(NAME)
+
+main.o: main.c
+$(CC) -c main.c
+
+alx.o: alx.c
+$(CC) -c alx.c
